@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+     <h1>Rilevazioni Temperatura prova 3</h1>
+    <form id="vote-form">
+    <p>
+        <label for="Maxtemp">Max Temperatura : <%- max%> </label>
+    </p>
+     <p>
+        <label for="Mintemp">Min Temperature : <%- min%></label>
+    </p>
+     <p>
+        <label for="Totrighe ">Totale Righe  : <%- righe%></label>
+    </p>
+    <p>
+        <label for="Time ">            Intervallo </label>
+        <label for="hour "> : <%- g_hour%></label>
+        <label for="min "> : <%- g_min%></label>
+        <label for="sec "> : <%- g_sec%> </label>
+    </p>
+
+        <a href="/settime">Set intervall</a>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID Sensore</th>
+                    <th scope="col">Temperatura</th>
+                    <th scope="col">Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%rileList.forEach( rilevazioni_1 => {%>
+                  <tr>
+                    <th scope="row"><%= rilevazioni_1.id_senzore %></th>
+                    <td><%= rilevazioni_1.tempe_rilevata %></td>
+                    <td><%= rilevazioni_1.dataOra %></td>
+                  </tr>
+               
+            <%})%>
+            
+              </tbody>
+        </table>  
+    </div>
+</body>
+</html>
