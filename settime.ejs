@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetIntervallo</title>
+</head>
+<body>
+    <div>
+        <form id="Settimenum" method="POST" action="/settime">
+            <label for="appt-time">Intervallo di caricamento : </label>
+            <input id="hour" type="number" name="hour" min="0" max="23" placeholder="00"> :
+            <input id="min"  type="number" name="min" min="0" max="59" placeholder="00"> :
+            <input id="sec"  type="number" name="sec" min="00" max="59" placeholder="00">
+             <button type="submit">Carica</button>
+        </form>
+      </div>
+</body>
+</html>
